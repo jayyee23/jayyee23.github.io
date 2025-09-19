@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James Niere - Portfolio</title>
-    <link rel="stylesheet" href="styles/modern-styles.css">
+    <link rel="stylesheet" href="styles/japanese-aesthetic.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,6 +13,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="main-content">
+    <!-- Sakura Petals Animation -->
+    <div class="sakura-container" id="sakura-container"></div>
+    
+    <!-- Interactive Background Particles -->
+    <div class="interactive-bg" id="interactive-bg"></div>
     <header class="container header active" id="home">
         <div class="header-content">
             <div class="left-header">
@@ -24,7 +29,7 @@
             </div>
             <div class="right-header">
                 <div class="hero-text">
-                    <p class="greeting">Hello, I'm</p>
+                    <p class="greeting" data-typing>Hello, I'm</p>
                     <h1 class="name">
                         James Ruel <span class="highlight">Niere</span>
                     </h1>
@@ -194,12 +199,18 @@
                         <i class="fab fa-aws"></i>
                     </div>
                     <div class="tl-content">
-                        <div class="company-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png" alt="AWS Logo" class="company-logo-img">
+                        <div class="company-header">
+                            <div class="company-logo-wrapper">
+                                <img src="img/aws-logo.svg" alt="AWS Logo" class="company-logo-img">
+                            </div>
+                            <div class="company-name">
+                                AWS
+                                <span class="company-full">Amazon Web Services</span>
+                            </div>
                         </div>
                         <p class="tl-duration">May 2025 - August 2025</p>
                         <h3>Software R&D Engineer Intern</h3>
-                        <h4>Amazon Web Services (AWS) - Bellevue, WA</h4>
+                        <h4>Bellevue, WA</h4>
                         <ul>
                             <li>Led migration of search infrastructure from ElasticSearch to OpenSearch, consolidating dual-cluster architecture and reducing operational overhead by 50%</li>
                             <li>Developed Python and AWS Lambda data migration scripts with feature flags for controlled rollout, leveraging DynamoDB streams and SQS</li>
@@ -221,12 +232,18 @@
                         <i class="fas fa-industry"></i>
                     </div>
                     <div class="tl-content">
-                        <div class="company-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Belden_Inc_logo.svg/2560px-Belden_Inc_logo.svg.png" alt="Belden Logo" class="company-logo-img">
+                        <div class="company-header">
+                            <div class="company-logo-wrapper">
+                                <img src="img/belden-logo.svg" alt="Belden Logo" class="company-logo-img">
+                            </div>
+                            <div class="company-name">
+                                BELDEN
+                                <span class="company-full">Industrial Automation & Networking</span>
+                            </div>
                         </div>
                         <p class="tl-duration">May 2024 - August 2024</p>
                         <h3>Software R&D Engineer Intern</h3>
-                        <h4>Belden Inc. - Santa Clara, CA</h4>
+                        <h4>Santa Clara, CA</h4>
                         <ul>
                             <li>Optimized firmware data retrieval with Spring caching, reducing latency and external service calls by 60%</li>
                             <li>Designed REST APIs for application image deployment/deletion with Spring Boot and Gradle</li>
@@ -247,12 +264,18 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="tl-content">
-                        <div class="company-logo">
-                            <span class="company-text-logo">Esync Technologies</span>
+                        <div class="company-header">
+                            <div class="company-logo-wrapper" style="background: linear-gradient(135deg, #4a90e2, #357abd);">
+                                <i class="fas fa-sync" style="color: white; font-size: 24px;"></i>
+                            </div>
+                            <div class="company-name">
+                                ESYNC
+                                <span class="company-full">Health & Wellness Technology</span>
+                            </div>
                         </div>
                         <p class="tl-duration">July 2023 - October 2023</p>
                         <h3>Software Engineer Intern</h3>
-                        <h4>Esync Technologies - Atlanta, GA (Remote)</h4>
+                        <h4>Atlanta, GA (Remote)</h4>
                         <ul>
                             <li>Developed mental health and wellness app using Flutter and Dart, boosting user engagement by 40%</li>
                             <li>Implemented UI improvements based on analytics, enhancing user satisfaction by 50%</li>
@@ -274,7 +297,7 @@
                 <p class="section-subtitle">Some of my best work</p>
             </div>
             
-            <div class="projects-grid">
+            <div class="projects-grid" id="projects-grid">
                 <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="project-image">
                         <img src="img/project-portfolio.jpg" alt="Portfolio Website">
@@ -417,7 +440,7 @@
             <div class="education-grid">
                 <div class="education-card main-education" data-aos="fade-up" data-aos-delay="100">
                     <div class="edu-icon">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="UC Berkeley" class="edu-logo">
+                        <img src="img/book.jfif" alt="UC Berkeley" class="edu-logo">
                     </div>
                     <h3>University of California, Berkeley</h3>
                     <h4>B.S. Electrical Engineering and Computer Science (EECS)</h4>
@@ -440,8 +463,8 @@
 
                 <div class="achievements-section">
                     <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="achievement-icon">
-                            <img src="https://tgrfoundation.org/wp-content/uploads/2019/10/TGR_EDU_Horizontal_LtBg_RGB.png" alt="TGR Foundation" class="achievement-logo">
+                        <div class="achievement-icon" style="background: linear-gradient(135deg, #d4af37, #f4e4c1);">
+                            <i class="fas fa-trophy" style="color: white; font-size: 30px;"></i>
                         </div>
                         <h4>Tiger (Earl) Woods Scholar</h4>
                         <p>Lifetime Scholar Fellow/Alumni</p>
@@ -458,8 +481,8 @@
                     </div>
 
                     <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="achievement-icon">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" alt="NASA" class="achievement-logo">
+                        <div class="achievement-icon" style="background: linear-gradient(135deg, #0B3D91, #FC3D21);">
+                            <i class="fas fa-rocket" style="color: white; font-size: 30px;"></i>
                         </div>
                         <h4>NASA L'SPACE NPWEE</h4>
                         <p>Team Researcher - Quantum Interferometry Research</p>
@@ -572,6 +595,6 @@
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="app.js"></script>
+    <script src="js/japanese-interactions.js"></script>
 </body>
 </html>
