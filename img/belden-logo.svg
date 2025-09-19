@@ -1,3 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-  <path fill="#E31E24" d="M20 15h10c8 0 12 4 12 10 0 4-2 7-6 8v.2c5 1 8 4 8 9 0 7-5 11-13 11H20V15zm9 15h1c3 0 5-1 5-4s-2-4-5-4h-1v8zm0 16h2c3 0 5-2 5-5s-2-4-5-4h-2v9zm35-31h20v7h-11v7h10v7h-10v8h11v7H64V15zm27 0h9v31h11v7H91V15zm34 0h10c11 0 17 7 17 19s-6 19-17 19h-10V15zm9 31h1c6 0 8-4 8-12s-2-12-8-12h-1v24zm35-31h20v7h-11v7h10v7h-10v8h11v7h-20V15zm27 0h8l12 24V15h8v38h-8l-12-24v24h-8V15z"/>
+  <defs>
+    <linearGradient id="belden-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Stylized B Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Outer shape -->
+    <rect x="0" y="0" width="40" height="40" rx="8" ry="8" fill="url(#belden-gradient)"/>
+    <!-- Inner B design -->
+    <path d="M12 10 L12 30 L22 30 Q28 30 28 25 Q28 22 25 21 Q28 20 28 17 Q28 10 22 10 Z M17 18 L21 18 Q23 18 23 16 Q23 14 21 14 L17 14 Z M17 26 L21 26 Q23 26 23 24 Q23 22 21 22 L17 22 Z" 
+          fill="white" opacity="0.9"/>
+    <!-- Decorative lines -->
+    <rect x="8" y="8" width="24" height="1" fill="white" opacity="0.3"/>
+    <rect x="8" y="31" width="24" height="1" fill="white" opacity="0.3"/>
+  </g>
+  
+  <!-- Belden Text -->
+  <text x="60" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="500" fill="#1a1a2e">Belden</text>
 </svg>
